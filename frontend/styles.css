@@ -1,0 +1,222 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1em;
+    margin-top: 5px;
+    color: #fff;
+}
+
+header button {
+    margin-top: 15px;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: var(--button-primary-hover-bg);
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Light Mode Colors */
+.light-mode {
+    --header-bg: #1e3a8a;
+    --header-color: #fff;
+    --background-color: #f0f8ff;
+    --text-color: #333;
+    --button-primary-bg: #2563eb;
+    --button-primary-color: #fff;
+    --button-primary-hover-bg: #1d4ed8;
+    --button-danger-bg: #e11d48;
+    --button-danger-hover-bg: #b91c1c;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --header-bg: #111827;
+    --header-color: #e5e7eb;
+    --background-color: #1f2937;
+    --text-color: #e5e7eb;
+    --button-primary-bg: #3b82f6;
+    --button-primary-color: #fff;
+    --button-primary-hover-bg: #2563eb;
+    --button-danger-bg: #ef4444;
+    --button-danger-hover-bg: #dc2626;
+}
+
+/* Containers */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    color: var(--header-bg);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Forms and Buttons */
+input, select, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.primary {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-color);
+    width: auto;
+    padding: 8px 16px;
+}
+
+button.primary:hover {
+    background-color: var(--button-primary-hover-bg);
+}
+
+button.danger {
+    background-color: var(--button-danger-bg);
+    color: white;
+    width: auto;
+    padding: 8px 16px;
+}
+
+button.danger:hover {
+    background-color: var(--button-danger-hover-bg);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--header-bg);
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--button-primary-bg);
+}
+
+.card button {
+    margin: 5px;
+    padding: 8px 12px;
+}
+
+button.danger:hover {
+    background-color: var(--button-danger-hover-bg);
+}
+
+/* Sidebar para estudiantes */
+#studentSidebar {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: var(--button-primary-hover-bg);
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  

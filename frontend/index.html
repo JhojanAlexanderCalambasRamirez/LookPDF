@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LookPDF - Biblioteca de Medicina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-content">
+      <div class="logo-section">
+        <h1>📚 LookPDF</h1>
+        <h2>Biblioteca Virtual de Medicina</h2>
+      </div>
+      <button id="darkModeToggle" onclick="toggleDarkMode()">Modo Oscuro</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Login -->
+    <div class="container" id="login">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="username" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button onclick="login()">Ingresar</button>
+      <button class="primary" onclick="openStudentMode()">Soy estudiante</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="container" id="adminPanel" style="display: none;">
+      <div style="text-align: right; margin-bottom: 20px;">
+        <button class="danger" onclick="logout()">Cerrar Sesión</button>
+      </div>
+      <!-- Gestión de Categorías -->
+      <section class="category-management">
+        <h2>Gestión de Categorías</h2>
+        <div class="form-group">
+          <input type="text" id="categoryName" placeholder="Nueva Categoría">
+          <button class="primary" onclick="createCategory()">Crear Categoría</button>
+        </div>
+        <div id="categoryContainer" class="category-list"></div>
+        <select id="categoryList" onchange="loadPDFs()"></select>
+      </section>
+      <!-- Subida de PDFs -->
+      <section class="upload-management">
+        <h2>Subir Nuevo PDF</h2>
+        <div class="form-group">
+          <input type="file" id="pdfInput">
+          <button class="primary" onclick="uploadPDF()">Subir PDF</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sidebar Menu para Estudiantes -->
+    <div id="studentSidebar" style="display: none;">
+      <div class="sidebar">
+        <h2>Categorías</h2>
+        <ul id="studentCategoryList"></ul>
+      </div>
+      <div class="content">
+        <h2>Lista de PDFs</h2>
+        <div id="pdfList" class="cards"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 LookPDF - Biblioteca de Medicina</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
